@@ -1,10 +1,5 @@
 function App() {
-  return <>
-  
-  {/* TODO: Will add components in future */}
-
-  
-  </>;
+  return <>This is app component </>;
 }
 
 export default App;
