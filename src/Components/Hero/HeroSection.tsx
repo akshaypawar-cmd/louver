@@ -1,8 +1,6 @@
 import { useState, useRef, useEffect, type FC } from "react";
-import { Link } from "react-router-dom";
-
 import { Asterisk, Menu, Search, ArrowUpRight } from "lucide-react";
-
+import { NavLink } from "react-router-dom";
 import bgImg from "@assets/bgImage.jpg";
 import user1 from "@assets/user1.jpg";
 import user2 from "@assets/user2.jpg";
@@ -10,6 +8,25 @@ import user3 from "@assets/user3.jpg";
 import user4 from "@assets/user4.jpg";
 
 const HeroSection: FC = () => {
+  const menuItems = [
+    { name: "About Us", link: "/aboutUs" },
+    { name: "Facilities", link: "/facilities" },
+    { name: "Membership", link: "/membership" },
+  ];
+
+  const navItems = [
+    { name: "About Us", link: "/about" },
+    { name: "Facilities", link: "/facilities" },
+    { name: "Membership", link: "/membership" },
+  ];
+
+  const users = [
+    { id: 1, img: user1 },
+    { id: 2, img: user2 },
+    { id: 3, img: user3 },
+    { id: 4, img: user4 },
+  ];
+
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
@@ -29,91 +46,108 @@ const HeroSection: FC = () => {
   return (
     <>
       <div
-        className="h-screen bg-no-repeat bg-[2%_center] bg-[length:170%] md:bg-center md:bg-[length:100%] relative min-h-[100vh]"
+        className="h-screen bg-no-repeat bg-cover bg-top-left md:bg-center md:bg-cover lg:bg-center lg:bg-cover relative"
         style={{ backgroundImage: `url(${bgImg})` }}
       >
-        <nav className="relative z-10 max-w-full p-6 flex flex-col">
-          <div className="flex items-center justify-between md:gap-1">
-            <div className="text-1xl font-bold text-white">
-              LOUVER <span className="font-normal">SPORT</span>
+        <nav className="relative md:whitespace-nowrap z-10 max-w-full p-6 flex flex-col">
+          <div className="flex items-center justify-between md:gap-2 w-full">
+            <div className="text-xl md:text-sm font-bold text-white">
+              LOUVER <span className="font-normal md:text-sm">SPORT</span>
             </div>
 
-            <div className="hidden md:flex items-center md:text-xs lg:text-sm md:gap-3 backdrop-contrast-50 rounded-full p-3 text-white font-normal">
-              <Link to={"/about"}>About Us</Link>
-              <Link to={"/facilities"}>Facilities</Link>
-              <Link to={"/membership"}>Membership</Link>
+            <div className="hidden md:flex items-center lg:gap-4 lg:p-4 text-sm gap-6 bg-white/10 backdrop-blur-sm rounded-full px-5 py-2 text-white">
+              {navItems.map((item) => (
+                <NavLink
+                  key={item.link}
+                  to={item.link}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-white border-b-2  border-white"
+                      : "text-white"
+                  }
+                >
+                  {item.name}
+                </NavLink>
+              ))}
             </div>
 
-            <div className="flex items-center space-x-3">
-              <div className="relative hidden border-2 border-gray-200 rounded-full sm:block">
+            <div className="flex items-center gap-3 lg:gap-5 md:gap-1">
+              <div className="hidden md:block relative backdrop-blur-sm rounded-full">
                 <Search
                   size={35}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 bg-gray-300 rounded-full p-2 text-gray-700"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 bg-gray-300 rounded-full p-2 text-gray-700 "
                 />
                 <input
                   type="text"
                   placeholder="Search here..."
-                  className="pl-2 pr-4 py-3 border border-white rounded-full bg-white/90 focus:outline-none"
+                  className="pl-3 pr-10 py-2 border border-white rounded-full focus:outline-none text-white"
                 />
               </div>
 
-              <button className="hidden sm:inline-flex bg-[#212529] md:px-2 md:py-2 md:text-xs text-white text-2lg px-5 py-2 rounded-full items-center gap-2 font-normal">
+              <button className="hidden md:flex bg-gray-900 lg:ml-3 items-center md:px-4 md:py-2   px-4 py-2 text-xs text-white rounded-full gap-2">
                 Book Now <ArrowUpRight />
               </button>
 
-              <div className="relative sm:hidden" ref={dropdownRef}>
+              <div className="md:hidden relative" ref={dropdownRef}>
                 <button
                   className="p-2 rounded-full bg-white"
                   onClick={() => setOpen(!open)}
                 >
-                  <Menu className="h-4 w-4" />
+                  <Menu className="h-5 w-5" />
                 </button>
 
                 {open && (
-                  <div className="absolute right-0 top-14 bg-white text-black rounded-xl shadow-xl w-36 p-2 z-50">
-                    <p className="px-3 py-2 rounded-lg bg-black text-white text-base">
-                      About Us
-                    </p>
-                    <p className="p-2">Facilities</p>
-                    <p className="p-2">Membership</p>
+                  <div className="absolute right-0 top-12 bg-white text-black rounded-xl shadow-xl w-36 p-2 z-50">
+                    {menuItems.map((item) => (
+                      <NavLink
+                        to={item.link}
+                        key={item.link}
+                        className={({ isActive }) =>
+                          isActive
+                            ? "px-3 py-2 rounded-lg bg-black text-white block"
+                            : "px-3 py-2 rounded-lg text-black block"
+                        }
+                      >
+                        {item.name}
+                      </NavLink>
+                    ))}
                   </div>
                 )}
               </div>
             </div>
           </div>
 
-          <div className="relative w-[98%] bg-transparent sm:hidden border border-white rounded-full mt-4">
+          <div className="relative md:hidden w-full bg-transparent border border-white rounded-full mt-4">
             <Search
-              size={35}
-              className="absolute right-3 top-1/2 -translate-y-1/2 bg-gray-300 rounded-full p-2 text-gray-900"
+              size={32}
+              className="absolute right-3 top-1/2 -translate-y-1/2 bg-gray-300 rounded-full p-1"
             />
             <input
               type="text"
               placeholder="Search here..."
-              className="w-full pl-7 pr-4 py-2 border-2 border-white rounded-full bg-white/90 focus:outline-none"
+              className="w-full pl-4 pr-12 py-2 rounded-full bg-white/17 focus:outline-none"
             />
           </div>
         </nav>
-        <button className="text-white border border-white ml-3 px-4 py-2 sm:px-5 md:mt-4 sm:py-2 rounded-full w-fit text-sm sm:text-base">
+
+        <button className="text-white border border-white ml-4 px-5 py-2 rounded-full text-sm mt-2">
           Sport Center
         </button>
 
-        <div className="relative h-1/2 flex items-center justify-start pl-4 mb-3   sm:pl-7">
-          <div className="text-white w-[95%] flex flex-col lg:mt-22 mb-13  mr-10 md:mt-12  md:mb-2">
-            <div className="flex w-full justify-between items-start gap-4 sm:gap-12   mb-19 pr-0 sm:pr-12">
-              <h1 className="line-clamp-3 flex-1 text-sm sm:text-xl lg:text-2xl xl:w-full md:mb-22 font-normal lg:font-light max-w-full sm:max-w-lg">
-                Your Play, Your Way-
-                <br className="hidden sm:block" />
+        <div className="flex items-center justify-start lg:mt-18 pl-6 mt-6">
+          <div className="text-white w-11/12">
+            <div className="flex justify-between gap-6">
+              <h1 className="text-xs  sm:text-xl lg:text-2xl font-light max-w-lg">
+                Your Play, Your Way–
+                <br />
                 Modern Sports Facilities
-                <br className="hidden sm:block" />
+                <br />
                 for Every Passion
               </h1>
 
-              <div className=" flex flex-col items-start rounded  px-2 py-2 sm:p-2  backdrop-contrast-50 md:backdrop-filter-none sm:backdrop-contrast-50  -m-18 ml-1 sm:m-0 sm:mr-13 md:-mr-10 xl:mb-6">
-                <div className="text-white text-2xl sm:text-3xl mb-1 sm:mb-3">
-                  <Asterisk />
-                </div>
-                <p className="text-white text-[10px] sm:text-sm leading-tight sm:leading-normal mr-20 sm:mr-0 w-[190%] sm:w-auto md:mb-9">
+              <div className="flex flex-col items-start bg-white/10 backdrop-blur-sm px-2 py-2 rounded">
+                <Asterisk className="text-white text-3xl mb-2" />
+                <p className="text-white text-[10px] sm:text-sm leading-tight">
                   All in one-sports <br /> facilities centre
                 </p>
               </div>
@@ -121,28 +155,21 @@ const HeroSection: FC = () => {
           </div>
         </div>
 
-        <div className="absolute w-full bottom-20 md:bottom-27  flex flex-col items-end  pr-6 md:pr-12">
-          <div className="flex border border-blue-800 rounded-full p-1  z-20">
-            <img
-              src={user1}
-              className="w-10 h-10 lg:w-12 lg:h-12 rounded-full object-cover"
-            />
-            <img
-              src={user2}
-              className="w-10 h-10 lg:w-12 lg:h-12 -ml-3 lg:-ml-4 rounded-full object-cover"
-            />
-            <img
-              src={user3}
-              className="w-10 h-10 lg:w-12 lg:h-12 -ml-3 lg:-ml-4 rounded-full object-cover"
-            />
-            <img
-              src={user4}
-              className="w-10 h-10 lg:w-12 lg:h-12 -ml-3 lg:-ml-4 rounded-full object-cover"
-            />
+        <div className="absolute w-full bottom-20 flex flex-col items-end pr-6">
+          <div className="flex border border-blue-800 rounded-full p-1">
+            {users.map((item, index) => (
+              <img
+                key={item.id}
+                src={item.img}
+                className={`w-10 h-10 rounded-full object-cover ${
+                  index !== 0 ? "-ml-3" : ""
+                }`}
+              />
+            ))}
           </div>
 
-          <p className="text-white text-xs sm:text-sm lg:text-base font-light lg:font-normal xl:-mt-1  leading-tight sm:leading-normal mt-3 md:mt-6 w-[220px] sm:w-[280px] md:w-[340px] text-right">
-            We’re committed to delivering a high-quality experience in a
+          <p className="text-white text-xs sm:text-sm mt-3 w-56 text-right">
+            We're committed to delivering a high-quality experience in a
             welcoming and supportive atmosphere
           </p>
         </div>
