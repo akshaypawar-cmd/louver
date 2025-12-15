@@ -1,7 +1,6 @@
 import { type FC } from "react";
-import { ArrowUpRight } from "lucide-react";
-import { ArrowLeft } from "lucide-react";
-import { ArrowRight } from "lucide-react";
+
+import { ArrowUpRight,ArrowLeft,ArrowRight } from "lucide-react";
 import swimming from "@assets/swim_img.jpg";
 import batman from "@assets/batman_img.jpg";
 
