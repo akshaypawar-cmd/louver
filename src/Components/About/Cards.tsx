@@ -1,9 +1,9 @@
 import { type FC } from "react";
-import swimming from "@assets/swim_img.jpg";
-import batman from "@assets/batman_img.jpg";
 import { ArrowUpRight } from "lucide-react";
 import { ArrowLeft } from "lucide-react";
 import { ArrowRight } from "lucide-react";
+import swimming from "@assets/swim_img.jpg";
+import batman from "@assets/batman_img.jpg";
 
 const Cards: FC = () => {
   return (
@@ -14,17 +14,17 @@ const Cards: FC = () => {
             <button className="mb-6 border text-black px-2 py-2 font-medium rounded-full text-xs">
               About Louvre
             </button>
-            <h2 className="text-xl md:text-base font-normal   md:line-clamp-5 leading-tight text-gray-800">
-              At Louvre sport 
-              center, we're passionate about providing a
-              <span className="block">top-notch environment for athletes of all levels. </span>
-          
+            <h2 className="text-xl md:text-base font-normal md:line-clamp-5 leading-tight text-gray-800">
+              At Louvre sport center, we're passionate about providing a
+              <span className="block">
+                top-notch environment for athletes of all levels.{" "}
+              </span>
             </h2>
 
             <div className="mt-8">
               <button className="inline-flex items-center gap-1 bg-gray-900 text-white px-4 py-2 rounded-full md:text-1xl shadow hover:opacity-95 cursor-pointer">
                 Get in Touch
-                <ArrowUpRight />
+                <ArrowUpRight/>
               </button>
             </div>
           </div>
@@ -84,8 +84,8 @@ const Cards: FC = () => {
               </div>
               <div className="flex md:flex-row items-center p-2 justify-between w-full gap-4">
                 <p className="text-xs md:text-xs text-gray-500 block max-w-1/2 line-clamp-2 md:block md:max-w-md">
-                  Discover your new - favorite  place to
-                  play, train, and compete.
+                  Discover your new - favorite place to play, train, and
+                  compete.
                 </p>
 
                 <div className="flex items-center gap-2">
