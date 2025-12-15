@@ -1,0 +1,135 @@
+import { type FC, useRef } from "react";
+import { ArrowUpRight,ArrowRight,ArrowLeft, ChevronRight} from "lucide-react";
+import FCImg from "@assets/bgImage.jpg";
+import backSwimming from "@assets/swim_2.jpg";
+import football from "@assets/food_ball.jpg";
+import girlRun from "@assets/girl_run.jpg";
+
+interface FacilityCard {
+  img: string;
+  title: string;
+  desc: string;
+}
+
+const Facility: FC = () => {
+  const cardsData: FacilityCard[] = [
+    {
+      img: FCImg,
+      title: "Tennis Court",
+      desc: "Professionally Designed Courts for Every Skill Level",
+    },
+    {
+      img: backSwimming,
+      title: "Swimming Pool",
+      desc: "Dive In - Relax and Enjoy",
+    },
+    {
+      img: football,
+      title: "Basketball Court",
+      desc: "Full-Sized Courts for Play and Competition",
+    },
+    {
+      img: girlRun,
+      title: "Running Track",
+      desc: "Full-Sized Courts for Play and Competition",
+    },
+  ];
+
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+
+  const scrollLeft = () => {
+  scrollRef.current?.scrollBy({
+    left: -280,
+    behavior: "smooth",
+  });
+};
+
+const scrollRight = () => {
+  scrollRef.current?.scrollBy({
+    left: 280,
+    behavior: "smooth",
+  });
+};
+
+
+  return (
+    <div className="max-w-7xl mx-auto p-5">
+      <div className="flex flex-col md:flex-row items-start justify-between mb-10  gap-6">
+        <div className="flex flex-col  md:flex-row items-start gap-4 w-4/5 ">
+          <span className="inline-block px-4 py-1.5 rounded-full border font-normal text-sm w-fit">
+            Facilities 
+          </span>
+
+          <h1 className=" font-semibold text-3xl text-gray-900 w-fit">
+            Explore Our Facilities
+          </h1>
+        </div>
+
+        <button className="bg-gray-950 text-white px-3 py-2 rounded-full flex items-center gap-2 font-normal">
+          View All  
+          <ChevronRight/>
+        </button>
+      </div>
+
+      <div  ref={scrollRef} className="md:grid-cols-4 gap-6 overflow-x-auto  flex snap-mandatory no-scrollbar">
+        {cardsData.map((item: FacilityCard, index: number) => (
+          <div
+            key={index}
+            className="relative min-w-64 h-96 rounded-2xl overflow-hidden snap-center"
+          >
+            <img
+              src={item.img}
+              alt={item.title}
+              className="w-full h-full object-cover"
+            />
+
+            <div className="absolute inset-0 from-black/80" />
+
+            <button className="absolute top-4 left-4 px-3 py-2 rounded-full border text-white text-xs font-medium">
+              {item.title}
+            </button>
+
+            <div className="absolute bottom-4 left-4 right-4 p-4 bg-black/50 rounded-xl flex justify-between items-center">
+              <p className="text-white text-sm lg:line-clamp-2">{item.desc}</p>
+
+              {index === 0 && (
+                <button className="p-3 rounded-full bg-white/20">
+                  <ArrowUpRight className="w-5 h-5 text-white" />
+                </button>
+                
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="flex justify-between">
+        <div className="flex flex-row items-start gap-4 ml-3 mt-10 w-full">
+          <div className="md:order-1 flex gap-4 md:items-start">
+            <button
+              aria-label="previous"
+              className="md:min-w-11 md:min-h-11 h-8 w-8 cursor-pointer rounded-full border flex items-center justify-center"
+            >
+              <ArrowLeft onClick={scrollLeft}  className="size-5"/>
+            </button>
+
+            <button
+              aria-label="next"
+              className="md:min-w-11 md:min-h-11 h-8 w-8 cursor-pointer rounded-full border flex items-center justify-center"
+            >
+              <ArrowRight className="size-5" onClick={scrollRight} />
+            </button>
+          </div>
+          <div className="md:order-2 text-end md:text-end w-full">
+            <h1 className="text-sm font-light leading-5 text-gray-500">
+              Book a court for focused practice, Team drills, or <span className="block">private
+              coaching, and take your game to the next level  </span> 
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Facility;
