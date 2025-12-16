@@ -1,0 +1,63 @@
+import { type FC } from "react";
+
+import girl from "@assets/girlGym.jpg";
+
+const UserInfo: FC = () => {
+  return (
+    <>
+      <section className="max-w-7xl  mx-auto">
+        <div className="bg-white rounded-2xl  overflow-hidden flex flex-col md:flex-row items-stretch gap-6">
+          <div className="w-full md:w-1/2 flex items-center justify-between p-4 md:p-8  order-2 md:order-1  ">
+            <div className="relative">
+              <img
+                src={girl}
+                alt="Gym"
+                className="w-full max-w-md h-72 object-cover shadow-2xl"
+              />
+            </div>
+          </div>
+
+          <div className="w-full md:w-1/2 p-6 md:p-8 flex  flex-col lg:flex-col justify-center order-1 md:order-2">
+            <h2 className="lg:text-3xl  text-4xl font-light text-start text-gray-900 mb-2">
+              Get in Touch{" "}
+            </h2>
+            <p className="text-gray-600  text-xs  text-start mb-6">
+              Reach out and we’ll get in touch within 24 hours.
+            </p>
+
+            <form className="space-y-4">
+              <input
+                type="text"
+                placeholder="Full Name"
+                className="w-full px-10 py-3 border border-gray-200 rounded-full focus:outline-none"
+              />
+
+              <input
+                type="email"
+                placeholder="Email Address"
+                className="w-full px-10 py-3 border border-gray-200 rounded-full focus:outline-none "
+              />
+
+              <input
+                type="tel"
+                placeholder="Phone Number"
+                className="w-full px-10 py-3 border border-gray-200 rounded-full focus:outline-none "
+              />
+
+              <div className="pt-2">
+                <button
+                  type="submit"
+                  className="text-xs font-semibold w-full bg-[#AEE5FF] text-gray-900 px-6 py-3 rounded-full hover:opacity-95 cursor-pointer"
+                >
+                  SUBMIT
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default UserInfo;
