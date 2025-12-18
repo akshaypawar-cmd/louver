@@ -5,11 +5,12 @@ import swimming from "@assets/swim_img.jpg";
 import batman from "@assets/batman_img.jpg";
 
 const Cards: FC = () => {
+  
   return (
     <>
       <section className="max-w-7xl p-4 md:p-8 mx-auto">
-        <div className="flex flex-col md:flex-row  md:ml-0 mx-auto gap-2">
-          <div className=" md:w-1/3 md:mt-3 text-left">
+        <div className="flex flex-col md:flex-row md:ml-0 mx-auto gap-2">
+          <div className="md:w-1/3 md:mt-3 text-left">
             <button className="mb-6 border text-black px-2 py-2 font-medium rounded-full text-xs">
               About Louvre
             </button>
@@ -21,7 +22,7 @@ const Cards: FC = () => {
             </h2>
 
             <div className="mt-8">
-              <button className="inline-flex items-center gap-1 bg-gray-900 text-white px-4 py-2 rounded-full md:text-1xl shadow hover:opacity-95 cursor-pointer">
+              <button className="inline-flex items-center gap-1 bg-gray-900 text-white px-4 py-2 rounded-full md:text-1xl cursor-pointer">
                 Get in Touch
                 <ArrowUpRight/>
               </button>
@@ -29,13 +30,12 @@ const Cards: FC = () => {
           </div>
 
           <div className="w-full flex flex-col md:flex-row mt-4 gap-6">
-            <div className="relative flex-1 max-w-md rounded-2xl shadow-lg overflow-hidden">
+            <div className="relative flex-1 w-full rounded-2xl shadow-lg overflow-hidden">
               <img
                 src={swimming}
                 alt="swimmer"
-                className="w-full h-64 md:h-80 lg:h-72 object-cover"
+                className="w-full h-64 md:h-80 object-cover"
               />
-
               <button className="bg-black/70 text-white text-xs absolute top-4 left-4 text-2lg px-5 py-2 rounded-full flex items-center gap-2  font-normal ">
                 Indoor Area
               </button>
@@ -56,7 +56,7 @@ const Cards: FC = () => {
               </div>
             </div>
 
-            <div className="relative flex-1 max-w-md bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div className="relative flex-1 w-full bg-white rounded-2xl shadow-lg overflow-hidden">
               <img
                 src={batman}
                 alt="basketball"
@@ -111,3 +111,4 @@ const Cards: FC = () => {
 };
 
 export default Cards;
+
