@@ -1,6 +1,7 @@
 import type { FC } from "react";
 
 import { Cards, Competition, Facility, HeroSection, UserInfo, UserProfile,  } from "@components";
+import UserMembership from "./components/membership/UserMembership.components";
 
 const App: FC = () => {
     
@@ -12,6 +13,7 @@ const App: FC = () => {
       <Competition/>
       <UserInfo />
       <UserProfile/>
+      <UserMembership/>
     </>
   );
 };
