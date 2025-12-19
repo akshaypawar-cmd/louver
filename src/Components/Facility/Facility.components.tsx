@@ -29,8 +29,8 @@ const Facility: FC = () => {
   return (
     <div className="max-w-7xl mx-auto p-5">
       <div className="flex flex-col md:flex-row items-start justify-between mb-10 gap-6">
-        <div className="flex flex-col md:flex-row items-start gap-5 w-3/5 ">
-          <span className="inline-block px-4 py-1.5 rounded-full border font-normal text-sm w-fit">
+        <div className="flex flex-col md:flex-row items-start gap-5">
+          <span className="inline-block px-4 py-1.5 rounded-full border font-normal text-sm">
             Facilities
           </span>
 
@@ -39,25 +39,25 @@ const Facility: FC = () => {
           </h1>
         </div>
 
-        <button className="bg-gray-950 text-white px-3 py-2 rounded-full flex mr-16 items-center gap-2 font-normal">
+        <button className="bg-gray-950 text-white px-3 py-2 rounded-full flex mr-2 items-center gap-2 font-normal">
           View All
           <ChevronRight />
         </button>
       </div>
-
+ 
       <div
         ref={scrollRef}
-        className="md:grid-cols-4 gap-3 overflow-x-auto hide-scrollbar flex snap-mandatory"
+        className="gap-3 overflow-x-auto hide-scrollbar flex snap-mandatory"
       >
         {cardsData.map((item: FacilityCard, index: number) => (
           <div
             key={index}
-            className="relative min-w-72 max-w-80 h-120 rounded-2xl overflow-hidden snap-center"
+            className="relative min-w-72 max-w-80 h-120 snap-center"
           >
             <img
               src={item.img}
               alt={item.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full rounded-xl object-cover"
             />
 
             <button className="absolute top-4 left-4 px-3 py-2 rounded-full border text-white text-xs font-medium">
@@ -65,11 +65,11 @@ const Facility: FC = () => {
             </button>
 
             <div className="absolute bottom-4 left-4 right-4 p-4 bg-black/50 rounded-xl flex justify-between items-center">
-              <p className="text-white text-sm lg:line-clamp-2">{item.desc}</p>
+              <p className="text-white text-sm">{item.desc}</p>
 
               {index === 0 && (
                 <button className="p-3 rounded-full bg-white/20">
-                  <ArrowUpRight className="w-5 h-5 text-white" />
+                  <ArrowUpRight className="w-5 h-5 text-white"/>
                 </button>
               )}
             </div>
@@ -82,7 +82,7 @@ const Facility: FC = () => {
           <div className="md:order-1 flex gap-4 md:items-start">
             <button
               aria-label="previous"
-              className="md:min-w-11 md:min-h-11 h-8 w-8 cursor-pointer rounded-full border flex items-center justify-center"
+              className="md:min-w-11 md:min-h-11 h-8 w-8 rounded-full border flex items-center justify-center"
             >
               <ArrowLeft onClick={scrollLeft} className="size-5" />
             </button>
@@ -94,7 +94,7 @@ const Facility: FC = () => {
               <ArrowRight className="size-5" onClick={scrollRight} />
             </button>
           </div>
-          <div className="md:order-2 text-end md:text-end w-full">
+          <div className="md:order-2 text-end w-full">
             <h1 className="text-sm font-light leading-5 text-gray-500">
               Book a court for focused practice, Team drills, or
               <span className="block">

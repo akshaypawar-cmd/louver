@@ -1,2 +1,4 @@
-export default "./Facility.component.tsx"
+import Facility from "./Facility.components"; 
+
+export {Facility} ;
 export * from "./Facility.types"
