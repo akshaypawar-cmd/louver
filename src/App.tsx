@@ -1,6 +1,7 @@
 import type { FC } from "react";
 
 import { Cards, Competition, Facility, HeroSection, UserInfo, UserMembership, UserProfile} from "@components";
+import Footer from "./components/Footer/Footer.components";
 
 const App: FC = () => {
     
@@ -13,6 +14,7 @@ const App: FC = () => {
       <UserInfo />
       <UserProfile/>
       <UserMembership/>
+      <Footer/>
     </>
   );
 };
