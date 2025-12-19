@@ -10,6 +10,7 @@ import type { FacilityCard } from "./Facility.types";
 import { cardsData } from "../../mock-data/facility";
 
 const Facility: FC = () => {
+  
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
   const scrollLeft = () => {
