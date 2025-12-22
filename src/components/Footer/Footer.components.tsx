@@ -6,7 +6,6 @@ import { Youtube } from "lucide-react";
 
 const Footer:FC = () => {
 
-
   return (
   <>  
   <section className="bg-sky-300 mb-10 m-4 rounded-xl p-5">
@@ -25,7 +24,7 @@ const Footer:FC = () => {
             <div className="md:grid grid grid-cols-3 md:grid-cols-3">
               <div>
                 <h4 className="text-gray-900 font-semibold mb-3">Facilities</h4>
-                <ul className=" space-y-8 text-gray-800 text-xs md:text-xs">
+                <ul className="space-y-8 text-gray-800 text-xs md:text-xs">
                   <li className="mb-1 text-xs">Tennis Courts</li>
                   <li className="mb-1 md:mb-2 text-xs">
                     Basketball Courts
@@ -53,28 +52,28 @@ const Footer:FC = () => {
               <div>
                 <h4 className="text-gray-900 mb-3 md:font-semibold">Social</h4>
                 <div className="flex flex-col gap-5">
-                  <div className="flex md:text-sm p-1 w-24 text-xs gap-2 md:w-24 items-center border border-gray-800 rounded-full   text-gray-800">
+                  <div className="flex md:text-sm p-1 w-24 text-xs gap-2 md:w-24 items-center border border-gray-800 rounded-full text-gray-800">
                     <div className="rounded-full">
                       <Instagram className="text-xs font-bold h-3 w-3 md:w-5 md:h-5"/>
                     </div>
                     <span className="md:text-sm md:-m-1">Instagram </span>
                   </div>
 
-                  <div className="flex md:text-sm p-1 w-24 text-xs gap-2 md:w-24 items-center border border-gray-800 rounded-full   text-gray-800">
+                  <div className="flex md:text-sm p-1 w-24 text-xs gap-2 md:w-24 items-center border border-gray-800 rounded-full text-gray-800">
                     <div className="rounded-full">
-                      <Facebook className="text-xs font-bold h-3 w-3 md:w-5 md:h-5" />
+                      <Facebook className="text-xs font-bold h-3 w-3 md:w-5 md:h-5"/>
                     </div>
                     <span className="md:text-sm md:-m-1">Facebook </span>
                   </div>
 
-                  <div className="flex md:text-sm p-1 w-24 text-xs gap-2 md:w-24 items-center border border-gray-800 rounded-full   text-gray-800">
+                  <div className="flex md:text-sm p-1 w-24 text-xs gap-2 md:w-24 items-center border border-gray-800 rounded-full text-gray-800">
                     <div className="rounded-full">
                       <Linkedin className="text-xs font-bold h-3 w-3 md:w-5 md:h-5"/>
                     </div>
                     <span className="md:text-sm md:-m-1"> Linkedin </span>
                   </div>
 
-                  <div className="flex md:text-sm  p-1 w-24 text-xs gap-2 md:w-24 items-center border border-gray-800 rounded-full   text-gray-800">
+                  <div className="flex md:text-sm  p-1 w-24 text-xs gap-2 md:w-24 items-center border border-gray-800 rounded-full text-gray-800">
                     <div className="rounded-full">
                       <Youtube className="text-xs font-bold h-3 w-3 md:w-5 md:h-5"/>
                     </div>
