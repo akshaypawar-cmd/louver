@@ -10,7 +10,7 @@ const Competition: FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
         <div className="md:col-span-5 flex flex-col gap-6">
           <div className="flex flex-wrap gap-3">
-            <button className="px-4 py-1.5 text-xs md:p-2 rounded-full font-medium border-gray-500 border  bg-sky-200 text-black">
+            <button className="px-4 py-1.5 text-xs md:p-2 rounded-full font-medium border-gray-500 border bg-sky-200 text-black">
               Competition
             </button>
             <button className="px-4 py-1.5 text-xs rounded-full md:p-2 font-medium border-gray-500 border">
@@ -56,4 +56,4 @@ const Competition: FC = () => {
   );
 };
 
-export default Competition ;
+export default Competition;
