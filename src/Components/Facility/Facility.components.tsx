@@ -10,7 +10,6 @@ import type { FacilityCard } from "./Facility.types";
 import { cardsData } from "../../mock-data/facility";
 
 const Facility: FC = () => {
-  
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
   const scrollLeft = () => {
@@ -35,7 +34,7 @@ const Facility: FC = () => {
             Facilities
           </span>
 
-          <h1 className="font-semibold text-3xl text-gray-900 w-fit">
+          <h1 className="font-semibold text-3xl text-gray-900">
             Explore Our Facilities
           </h1>
         </div>
@@ -45,16 +44,13 @@ const Facility: FC = () => {
           <ChevronRight />
         </button>
       </div>
- 
+
       <div
         ref={scrollRef}
         className="gap-3 overflow-x-auto hide-scrollbar flex snap-mandatory"
       >
         {cardsData.map((item: FacilityCard, index: number) => (
-          <div
-            key={index}
-            className="relative min-w-72 max-w-80 h-120 snap-center"
-          >
+          <div key={index} className="relative min-w-72 max-w-80 snap-center">
             <img
               src={item.img}
               alt={item.title}
@@ -85,7 +81,7 @@ const Facility: FC = () => {
               aria-label="previous"
               className="md:min-w-11 md:min-h-11 h-8 w-8 rounded-full border flex items-center justify-center"
             >
-              <ArrowLeft onClick={scrollLeft} className="size-5" />
+              <ArrowLeft onClick={scrollLeft} className="size-5"/>
             </button>
 
             <button

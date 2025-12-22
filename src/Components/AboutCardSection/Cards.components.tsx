@@ -16,7 +16,7 @@ const Cards: FC = () => {
             </button>
             <h2 className="text-xl md:text-base font-normal md:line-clamp-5 leading-tight text-gray-800">
               At Louvre sport center, we're passionate about providing a
-              <span className="block">
+              <span className="block md:inline">
                 top-notch environment for athletes of all levels.{" "}
               </span>
             </h2>
@@ -36,7 +36,7 @@ const Cards: FC = () => {
                 alt="swimmer"
                 className="w-full h-64 md:h-80 object-cover"
               />
-              <button className="bg-black/70 text-white text-xs absolute top-4 left-4 text-2lg px-5 py-2 rounded-full flex items-center gap-2  font-normal ">
+              <button className="bg-black/70 text-white text-xs absolute top-4 left-4 text-2lg px-5 py-2 rounded-full flex items-center gap-2 font-normal">
                 Indoor Area
               </button>
 
@@ -78,7 +78,7 @@ const Cards: FC = () => {
                 </div>
 
                 <button className="bg-black text-white font-semibold cursor-pointer rounded-full w-10 h-10 flex items-center justify-center shadow-md">
-                  <ArrowUpRight className="min-w-4 min-h-4" />
+                  <ArrowUpRight className="min-w-4 min-h-4"/>
                 </button>
               </div>
               <div className="flex md:flex-row items-center p-2 justify-between w-full gap-4">
@@ -92,13 +92,13 @@ const Cards: FC = () => {
                     aria-label="previous"
                     className="min-w-10 min-h-10 font-light cursor-pointer rounded-full border border-gray-300 flex items-center justify-center"
                   >
-                    <ArrowLeft className="min-w-4 min-h-4 text-gray-600" />
+                    <ArrowLeft className="min-w-4 min-h-4 text-gray-600"/>
                   </button>
                   <button
                     aria-label="next"
                     className="cursor-pointer min-w-10 min-h-10 rounded-full border border-gray-300 flex items-center justify-center"
                   >
-                    <ArrowRight className="min-w-4 min-h-4 text-gray-600" />
+                    <ArrowRight className="min-w-4 min-h-4 text-gray-600"/>
                   </button>
                 </div>
               </div>
