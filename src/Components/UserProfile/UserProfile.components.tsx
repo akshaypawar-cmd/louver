@@ -26,7 +26,7 @@ const UserProfile:FC = () => {
               <ArrowLeft className="text-3xl"/>
             </button>
 
-            <div className="rounded-2xl md:px-10 md:py-4 flex flex-col md:flex-row bg-gray-50 items-center gap-4 p-4 h-64">
+            <div className="rounded-2xl md:px-10 md:py-4 flex flex-col md:flex-row bg-gray-50 items-center gap-4 p-4 h-64 md:h-52">
               <img
                 src={userProfile}
                 alt="User"
@@ -54,23 +54,23 @@ const UserProfile:FC = () => {
               aria-label="next"
               className="hidden md:flex w-11 h-11 border-gray-600 text-gray-600 rounded-full border items-center justify-center"
             >
-              <ArrowRight className="text-3xl" />
+              <ArrowRight className="text-3xl"/>
             </button>
           </div>
 
-          <div className="flex md:hidden gap-40">
+          <div className="flex md:hidden mt-2 gap-40">
             <button
               aria-label="previous"
               className="w-11 h-11 border-gray-600 text-gray-600 rounded-full border flex items-center justify-center"
             >
-              <ArrowLeft className="text-3xl" />
+              <ArrowLeft className="text-3xl"/>
             </button>
 
             <button
               aria-label="next"
               className="w-11 h-11 border-gray-600 text-gray-600 rounded-full border flex items-center justify-center"
             >
-              <ArrowRight className="text-3xl" />
+              <ArrowRight className="text-3xl"/>
             </button>
           </div>
         </div>
