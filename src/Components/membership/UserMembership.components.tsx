@@ -29,7 +29,7 @@ const UserMembership:FC = () => {
 
             <div className="mb-6 w-full">
               <h2 className="text-xl md:text-4xl line-clamp-4 font-bold text-white mb-2">
-                Get the Last Updates,<span className="block md:inline">Special Offers, </span>  <span className="md:block"> and Exclusive Event
+                Get the Last Updates,<span className="block md:inline">Special Offers, </span> <span className="md:block"> and Exclusive Event
                 Invitations! </span> 
               </h2>
             </div>
@@ -42,7 +42,7 @@ const UserMembership:FC = () => {
               />
               <button
                 type="button"
-                className="absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 flex items-center justify-center rounded-full  bg-blue-500 hover:opacity-95 transition"
+                className="absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 flex items-center justify-center rounded-full bg-blue-500 hover:opacity-95 transition"
                 aria-label="send email"
               >
                 <Send className="size-5"/>
