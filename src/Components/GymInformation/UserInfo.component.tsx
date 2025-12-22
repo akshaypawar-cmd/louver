@@ -1,22 +1,23 @@
 import { type FC } from "react";
 
-import girl from "@assets/girlGym.jpg";
+import girl from "@assets/girl_Gym.jpg";
 
 const UserInfo: FC = () => {
+
   return (
     <>
       <section className="max-w-7xl mx-auto">
-        <div className="bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row items-stretch gap-6">
-          <div className="w-full md:w-1/2 flex items-center justify-between p-4 md:p-8  order-2 md:order-1">
+        <div className="rounded-2xl overflow-hidden flex flex-col md:flex-row gap-4">
+          <div className="w-full md:w-1/2 flex items-center justify-between p-4 md:p-8 order-2 md:order-1">
             <img
               src={girl}
               alt="Gym"
-              className="w-full max-w-md h-72 object-cover shadow-2xl"
+              className="w-full h-72 object-cover shadow-2xl"
             />
           </div>
 
-          <div className="w-full md:w-1/2 p-6 md:p-8 flex  flex-col md:mr-10 md:flex-col justify-center order-1 md:order-2">
-            <h2 className="md:text-3xl  text-4xl font-light text-start text-gray-900 mb-2">
+          <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col md:mr-10 md:flex-col justify-center order-1 md:order-2">
+            <h2 className="md:text-3xl text-4xl font-light text-start text-gray-900 mb-2">
               Get in Touch
             </h2>
             <p className="text-gray-600 text-xs text-start mb-6">
