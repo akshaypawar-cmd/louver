@@ -36,7 +36,7 @@ const Cards: FC = () => {
                 alt="swimmer"
                 className="w-full h-64 md:h-80 object-cover"
               />
-              <button className="bg-black/70 text-white text-xs absolute top-4 left-4 text-2lg px-5 py-2 rounded-full flex items-center gap-2 font-normal">
+              <button className="bg-black/70 text-white text-xs absolute top-4 left-4 px-5 py-2 rounded-full flex items-center gap-2 font-normal">
                 Indoor Area
               </button>
 
@@ -90,7 +90,7 @@ const Cards: FC = () => {
                 <div className="flex items-center gap-2">
                   <button
                     aria-label="previous"
-                    className="min-w-10 min-h-10 font-light cursor-pointer rounded-full border border-gray-300 flex items-center justify-center"
+                    className="min-w-10 min-h-10 font-light rounded-full border border-gray-300 flex items-center justify-center"
                   >
                     <ArrowLeft className="min-w-4 min-h-4 text-gray-600"/>
                   </button>

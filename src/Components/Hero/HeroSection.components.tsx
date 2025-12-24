@@ -85,7 +85,7 @@ const HeroSection: FC = () => {
                 />
               </div>
 
-              <button className="hidden md:flex bg-gray-900 md:ml-3 items-center md:px-4 md:py-2 px-4 py-2 text-xs text-white rounded-full gap-2">
+              <button className="hidden md:flex bg-gray-900 md:ml-3 items-center px-4 py-2 text-xs text-white rounded-full gap-2">
                 Book Now <ArrowUpRight />
               </button>
 
@@ -146,7 +146,7 @@ const HeroSection: FC = () => {
                 for Every Passion
               </h1>
 
-              <div className="flex flex-col items-start bg-white/10 backdrop-blur-sm px-2 py-2 rounded">
+              <div className="flex flex-col items-start bg-white/10 backdrop-blur-sm p-2  rounded">
                 <Asterisk className="text-white text-3xl mb-2"/>
                 <p className="text-white  text-sm leading-tight">
                   All in one-sports <span className="block">facilities centre </span> 
