@@ -66,7 +66,7 @@ const Facility: FC = () => {
 
               {index === 0 && (
                 <button className="p-3 rounded-full bg-white/20">
-                  <ArrowUpRight className="w-5 h-5 text-white"/>
+                  <ArrowUpRight className="w-5 h-5 text-white" />
                 </button>
               )}
             </div>
@@ -75,29 +75,32 @@ const Facility: FC = () => {
       </div>
 
       <div className="flex justify-between">
-        <div className="flex flex-row items-start gap-4 ml-3 mt-10 w-full">
-          <div className="md:order-1 flex gap-4 md:items-start">
+        <div className="flex flex-col md:flex-row gap-4 ml-3 mt-10 w-full">
+          <div className="order-1 md:order-2 w-full text-end md:text-end">
+            <h1 className="text-sm font-light leading-5 text-gray-500">
+              Book a court for focused practice, Team drills,
+              <span className="block">
+                or private coaching, and take your game to the next level
+              </span>
+            </h1>
+          </div>
+
+          <div className="order-2 md:order-1 flex gap-4 justify-end md:justify-start">
             <button
               aria-label="previous"
               className="md:min-w-11 md:min-h-11 h-8 w-8 rounded-full border flex items-center justify-center"
+              onClick={scrollLeft}
             >
-              <ArrowLeft onClick={scrollLeft} className="size-5"/>
+              <ArrowLeft className="size-5" />
             </button>
 
             <button
               aria-label="next"
-              className="md:min-w-11 md:min-h-11 h-8 w-8 cursor-pointer rounded-full border flex items-center justify-center"
+              className="md:min-w-11 md:min-h-11 h-8 w-8 rounded-full border flex items-center justify-center"
+              onClick={scrollRight}
             >
-              <ArrowRight className="size-5" onClick={scrollRight} />
+              <ArrowRight className="size-5" />
             </button>
-          </div>
-          <div className="md:order-2 text-end w-full">
-            <h1 className="text-sm font-light leading-5 text-gray-500">
-              Book a court for focused practice, Team drills, or
-              <span className="block">
-                private coaching, and take your game to the next level
-              </span>
-            </h1>
           </div>
         </div>
       </div>
