@@ -1,3 +1,3 @@
-export * from "./Facility"
-export * from "./AboutCardSection"
-export * from "./Hero"
+export * from "./facilitySection"
+export * from "./aboutSection"
+export * from "./heroSection"

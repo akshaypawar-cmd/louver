@@ -1,6 +1,6 @@
 import type { FC } from "react";
 
-import { Cards, Facility, HeroSection } from "./components";
+import { Cards, Facility, HeroSection,  } from "@components";
 
 const App: FC = () => {
   

@@ -2,7 +2,7 @@ import FCImg  from '@assets/bgImage.jpg';
 import  girlRun from '@assets/girl_run.jpg';
 import  football  from '@assets/food_ball.jpg';
 import  backSwimming  from '@assets/swim_2.jpg';
-import type { FacilityCard } from '../components';
+import type { FacilityCard } from '@components';
 
 export const cardsData: FacilityCard[] = [
     {
