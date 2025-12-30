@@ -1,9 +1,10 @@
 import { type FC } from "react";
 
 import girl from "@assets/girl_Gym.jpg";
+import { formFields } from "../../mock-data/userSec";
 
 const UserInfo: FC = () => {
-
+  
   return (
     <>
       <section className="max-w-7xl mx-auto">
@@ -25,23 +26,15 @@ const UserInfo: FC = () => {
             </p>
 
             <form className="space-y-4">
-              <input
-                type="text"
-                placeholder="Full Name"
-                className="w-full px-10 py-3 border border-gray-200 rounded-full outline-none"
-              />
-
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="w-full px-10 py-3 border border-gray-200 rounded-full outline-none"
-              />
-
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                className="w-full px-10 py-3 border border-gray-200 rounded-full outline-none"
-              />
+              {formFields.map((field) => (
+                <input
+                  key={field.name}
+                  type={field.type}
+                  name={field.name}
+                  placeholder={field.placeholder}
+                  className="w-full px-10 py-3 border border-gray-200 rounded-full outline-none"
+                />
+              ))}
 
               <div className="pt-2">
                 <button
