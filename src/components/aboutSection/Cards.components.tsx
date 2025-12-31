@@ -10,7 +10,7 @@ const Cards: FC = () => {
     <>
       <section className="max-w-7xl p-4 md:p-8 mx-auto">
         <div className="flex flex-col md:flex-row md:ml-0 mx-auto gap-2">
-          <div className="md:w-1/3 md:mt-3 text-left">
+          <div className=" md:w-1/3 md:mt-3 text-left">
             <button className="mb-6 border text-black px-2 py-2 font-medium rounded-full text-xs">
               About Louvre
             </button>
