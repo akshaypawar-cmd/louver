@@ -10,9 +10,9 @@
     "paths": {
       "@assets/": ["./src/assets/"],
       "@components": ["./src/components/"],
-      "@mockData/":["./src/mockData/"]
-    },
-    
+      "@mockData":["./src/mockData/index"]
+    }, 
+
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
