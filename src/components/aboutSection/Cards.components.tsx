@@ -5,23 +5,24 @@ import swimming from "@assets/swim_img.jpg";
 import batman from "@assets/batman_img.jpg";
 
 const Cards: FC = () => {
+  
   return (
     <>
       <section className="max-w-7xl p-4 md:p-8 mx-auto">
-        <div className="flex flex-col md:flex-row  md:ml-0 mx-auto gap-2">
-          <div className=" md:w-1/3 md:mt-3 text-left">
+        <div className="flex flex-col md:flex-row md:ml-0 mx-auto gap-2">
+          <div className="md:w-1/3 md:mt-3 text-left">
             <button className="mb-6 border text-black px-2 py-2 font-medium rounded-full text-xs">
               About Louvre
             </button>
             <h2 className="text-xl md:text-base font-normal md:line-clamp-5 leading-tight text-gray-800">
               At Louvre sport center, we're passionate about providing a
-              <span className="block">
+              <span className="block md:inline">
                 top-notch environment for athletes of all levels.{" "}
               </span>
             </h2>
 
             <div className="mt-8">
-              <button className="inline-flex items-center gap-1 bg-gray-900 text-white px-4 py-2 rounded-full md:text-1xl shadow hover:opacity-95 cursor-pointer">
+              <button className="inline-flex items-center gap-1 bg-gray-900 text-white px-4 py-2 rounded-full md:text-1xl cursor-pointer">
                 Get in Touch
                 <ArrowUpRight/>
               </button>
@@ -29,14 +30,13 @@ const Cards: FC = () => {
           </div>
 
           <div className="w-full flex flex-col md:flex-row mt-4 gap-6">
-            <div className="relative flex-1 max-w-md rounded-2xl shadow-lg overflow-hidden">
+            <div className="relative flex-1 w-full rounded-2xl shadow-lg overflow-hidden">
               <img
                 src={swimming}
                 alt="swimmer"
-                className="w-full h-64 md:h-80 lg:h-72 object-cover"
+                className="w-full h-64 md:h-80 object-cover"
               />
-
-              <button className="bg-black/70 text-white text-xs absolute top-4 left-4 text-2lg px-5 py-2 rounded-full flex items-center gap-2  font-normal ">
+              <button className="bg-black/70 text-white text-xs absolute top-4 left-4 px-5 py-2 rounded-full flex items-center gap-2 font-normal">
                 Indoor Area
               </button>
 
@@ -56,7 +56,7 @@ const Cards: FC = () => {
               </div>
             </div>
 
-            <div className="relative flex-1 max-w-md bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div className="relative flex-1 w-full bg-white rounded-2xl shadow-lg overflow-hidden">
               <img
                 src={batman}
                 alt="basketball"
@@ -78,7 +78,7 @@ const Cards: FC = () => {
                 </div>
 
                 <button className="bg-black text-white font-semibold cursor-pointer rounded-full w-10 h-10 flex items-center justify-center shadow-md">
-                  <ArrowUpRight className="min-w-4 min-h-4" />
+                  <ArrowUpRight className="min-w-4 min-h-4"/>
                 </button>
               </div>
               <div className="flex md:flex-row items-center p-2 justify-between w-full gap-4">
@@ -90,15 +90,15 @@ const Cards: FC = () => {
                 <div className="flex items-center gap-2">
                   <button
                     aria-label="previous"
-                    className="min-w-10 min-h-10 font-light cursor-pointer rounded-full border border-gray-300 flex items-center justify-center"
+                    className="min-w-10 min-h-10 font-light rounded-full border border-gray-300 flex items-center justify-center"
                   >
-                    <ArrowLeft className="min-w-4 min-h-4 text-gray-600" />
+                    <ArrowLeft className="min-w-4 min-h-4 text-gray-600"/>
                   </button>
                   <button
                     aria-label="next"
                     className="cursor-pointer min-w-10 min-h-10 rounded-full border border-gray-300 flex items-center justify-center"
                   >
-                    <ArrowRight className="min-w-4 min-h-4 text-gray-600" />
+                    <ArrowRight className="min-w-4 min-h-4 text-gray-600"/>
                   </button>
                 </div>
               </div>
@@ -111,3 +111,4 @@ const Cards: FC = () => {
 };
 
 export default Cards;
+

@@ -8,6 +8,9 @@
   "compilerOptions": {
     "paths": {
       "@assets/*": ["./src/assets/*"],
+      "@components/*": ["./src/components/*"],
+     "@mockData": ["./src/mockData"]
+     
     }
   }
 }

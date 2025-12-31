@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect, type FC } from "react";
 import { Asterisk, Menu, Search, ArrowUpRight } from "lucide-react";
 import { NavLink } from "react-router-dom";
+
 import bgImg from "@assets/bgImage.jpg";
 import user1 from "@assets/user1.jpg";
 import user2 from "@assets/user2.jpg";
@@ -15,9 +16,9 @@ const HeroSection: FC = () => {
   ];
 
   const navItems = [
-    { name: "About Us", link: "/about" },
-    { name: "Facilities", link: "/facilities" },
-    { name: "Membership", link: "/membership" },
+    { name:"About Us",link: "/about" },
+    { name:"Facilities",link: "/facilities" },
+    { name:"Membership",link: "/membership" },
   ];
 
   const users = [
@@ -46,7 +47,7 @@ const HeroSection: FC = () => {
   return (
     <>
       <div
-        className="h-screen bg-no-repeat bg-cover bg-top-left md:bg-center md:bg-cover lg:bg-center lg:bg-cover relative"
+        className="h-screen bg-no-repeat bg-cover bg-top-left md:bg-center md:bg-cover relative"
         style={{ backgroundImage: `url(${bgImg})` }}
       >
         <nav className="relative md:whitespace-nowrap z-10 max-w-full p-6 flex flex-col">
@@ -55,14 +56,14 @@ const HeroSection: FC = () => {
               LOUVER <span className="font-normal md:text-sm">SPORT</span>
             </div>
 
-            <div className="hidden md:flex items-center lg:gap-4 lg:p-4 text-sm gap-6 bg-white/10 backdrop-blur-sm rounded-full px-5 py-2 text-white">
+            <div className="hidden md:flex items-center md:gap-4 md:p-4 text-sm gap-6 bg-white/10 backdrop-blur-sm rounded-full px-5 py-2 text-white">
               {navItems.map((item) => (
                 <NavLink
                   key={item.link}
                   to={item.link}
                   className={({ isActive }) =>
                     isActive
-                      ? "text-white border-b-2  border-white"
+                      ? "text-white border-b-2 border-white"
                       : "text-white"
                   }
                 >
@@ -71,7 +72,7 @@ const HeroSection: FC = () => {
               ))}
             </div>
 
-            <div className="flex items-center gap-3 lg:gap-5 md:gap-1">
+            <div className="flex items-center gap-3 md:gap-2">
               <div className="hidden md:block relative backdrop-blur-sm rounded-full">
                 <Search
                   size={35}
@@ -80,11 +81,11 @@ const HeroSection: FC = () => {
                 <input
                   type="text"
                   placeholder="Search here..."
-                  className="pl-3 pr-10 py-2 border border-white rounded-full focus:outline-none text-white"
+                  className="pl-3 pr-10 py-2 border border-white rounded-full outline-none text-white"
                 />
               </div>
 
-              <button className="hidden md:flex bg-gray-900 lg:ml-3 items-center md:px-4 md:py-2   px-4 py-2 text-xs text-white rounded-full gap-2">
+              <button className="hidden md:flex bg-gray-900 md:ml-3 items-center px-4 py-2 text-xs text-white rounded-full gap-2">
                 Book Now <ArrowUpRight />
               </button>
 
@@ -125,7 +126,7 @@ const HeroSection: FC = () => {
             <input
               type="text"
               placeholder="Search here..."
-              className="w-full pl-4 pr-12 py-2 rounded-full bg-white/17 focus:outline-none"
+              className="w-full pl-4 pr-12 py-2 rounded-full bg-white/17 outline-none"
             />
           </div>
         </nav>
@@ -134,10 +135,10 @@ const HeroSection: FC = () => {
           Sport Center
         </button>
 
-        <div className="flex items-center justify-start lg:mt-18 pl-6 mt-6">
+        <div className="flex items-center justify-start md:mt-12 pl-6 mt-6">
           <div className="text-white w-11/12">
             <div className="flex justify-between gap-6">
-              <h1 className="text-xs  sm:text-xl lg:text-2xl font-light max-w-lg">
+              <h1 className="text-xs md:text-2xl font-light max-w-lg">
                 Your Play, Your Way–
                 <br />
                 Modern Sports Facilities
@@ -145,10 +146,10 @@ const HeroSection: FC = () => {
                 for Every Passion
               </h1>
 
-              <div className="flex flex-col items-start bg-white/10 backdrop-blur-sm px-2 py-2 rounded">
-                <Asterisk className="text-white text-3xl mb-2" />
-                <p className="text-white text-[10px] sm:text-sm leading-tight">
-                  All in one-sports <br /> facilities centre
+              <div className="flex flex-col items-start bg-white/10 backdrop-blur-sm p-2  rounded">
+                <Asterisk className="text-white text-3xl mb-2"/>
+                <p className="text-white  text-sm leading-tight">
+                  All in one-sports <span className="block">facilities centre </span> 
                 </p>
               </div>
             </div>
@@ -164,7 +165,7 @@ const HeroSection: FC = () => {
                 className={`w-10 h-10 rounded-full object-cover ${
                   index !== 0 ? "-ml-3" : ""
                 }`}
-              />
+              />  
             ))}
           </div>
 

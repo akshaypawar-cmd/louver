@@ -1,15 +1,17 @@
 import type { FC } from "react";
-import HeroSection from "./Components/Hero/HeroSection.js";
-import Cards from "./Components/About/Cards.js";
 
+import { Cards, Facility, HeroSection,  } from "@components";
 
 const App: FC = () => {
+  
   return (
     <>
-      <HeroSection />
+      <HeroSection/> 
       <Cards/>
+      <Facility/>
     </>
   );
 };
 
 export default App;
+
