@@ -1,6 +1,7 @@
 import type { FC } from "react";
 
 import { Cards, Facility, HeroSection,  } from "@components";
+import Competition from "./components/Competition/Competition";
 
 const App: FC = () => {
   
@@ -9,6 +10,7 @@ const App: FC = () => {
       <HeroSection/> 
       <Cards/>
       <Facility/>
+      <Competition/>
     </>
   );
 };
