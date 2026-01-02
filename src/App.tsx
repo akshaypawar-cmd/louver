@@ -1,6 +1,7 @@
 import type { FC } from "react";
 
 import { Cards, Competition, Facility, HeroSection,  } from "@components";
+import { UserInfo } from "./components/GymInformation";
 
 const App: FC = () => {
   
@@ -10,7 +11,7 @@ const App: FC = () => {
       <Cards/>
       <Facility/>
       <Competition/>
-      <UserInfo/>
+      <UserInfo />
     </>
   );
 };

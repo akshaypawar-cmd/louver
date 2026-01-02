@@ -1,3 +1,3 @@
-import type UserInfo from "./UserInfo.component";
+import UserInfo from "./UserInfo.component";
 
-export type {UserInfo} 
+export {UserInfo} 
