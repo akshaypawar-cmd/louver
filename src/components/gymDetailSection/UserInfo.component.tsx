@@ -1,7 +1,7 @@
 import { type FC } from "react";
 
 import girl from "@assets/girl_Gym.jpg";
-import { formFields } from "../../mock-data/userSec";
+import { formFields } from "@mockData";
 
 const UserInfo: FC = () => {
   
