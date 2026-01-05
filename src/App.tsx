@@ -1,11 +1,9 @@
 import type { FC } from "react";
-import UserProfile from "./components/UserProfile/UserProfile.components.js";
 
-import { Cards, Competition, Facility, HeroSection, UserInfo,  } from "@components";
-
+import { Cards, Competition, Facility, HeroSection, UserInfo, UserProfile,  } from "@components";
 
 const App: FC = () => {
-  
+    
   return (
     <>
       <HeroSection/> 

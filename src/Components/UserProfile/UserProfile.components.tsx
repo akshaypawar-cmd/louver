@@ -1,8 +1,7 @@
-import type { FC } from "react";
-import { useState } from "react";
+import { useState, type FC  } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
-import { testimonials } from "../../mockData";
+import { testimonials } from "@mockData";
 
 const UserProfile: FC = () => {
 
@@ -10,7 +9,6 @@ const UserProfile: FC = () => {
 
   const hasData = testimonials.length > 0;
   const currentTestimonial = hasData ? testimonials[currentIndex] : null;
-
   const arrowBtnClass ="hidden md:flex size-11 border border-gray-600 text-gray-600 rounded-full items-center justify-center";
   const iconBtnClass ="w-11 h-11 border border-gray-600 text-gray-600 rounded-full flex items-center justify-center";
 
