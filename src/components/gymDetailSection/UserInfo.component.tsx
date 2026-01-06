@@ -7,13 +7,13 @@ const UserInfo: FC = () => {
   
   return (
     <>
-      <section className="max-w-7xl mx-auto">
+      <section className="max-w-7xl mx-auto bg-neutral-100">
         <div className="rounded-2xl overflow-hidden flex flex-col md:flex-row gap-4">
           <div className="w-full md:w-1/2 flex items-center p-4 md:p-8 order-2 md:order-1">
             <img
               src={girl}
               alt="Gym"
-              className="w-full h-96 object-cover shadow-2xl"
+              className="w-full h-96 object-cover"
             />
           </div>
 
@@ -39,7 +39,7 @@ const UserInfo: FC = () => {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="text-base font-semibold w-full bg-sky-200 text-gray-900 px-6 py-3 rounded-full cursor-pointer"
+                  className="text-base font-semibold w-full bg-sky-300 text-gray-900 px-6 py-3 rounded-full cursor-pointer"
                 >
                   SUBMIT
                 </button>

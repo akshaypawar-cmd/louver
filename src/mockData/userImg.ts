@@ -8,7 +8,7 @@ export const testimonials = [
     name: "David Warner",
     image: user3,
     message:
-      "Praesent commodo cursus magna, vel scelerisque nisl consectetur et turpis orci lectus maecenas..",
+      "Praesent commodo cursus magna, vel scelerisque nisl consectetur et turpis orci lectus maecenas Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut voluptate quo quibusdam iure quas nulla perspiciatis saepe rerum, hic aperiam necessitatibus, nihil ducimus. Cumque nobis odit possimus, quis voluptas omnis...",
     date: "Jan 21, 1995",
   },
   {
@@ -16,7 +16,7 @@ export const testimonials = [
     name: "John Doe",
     image: user1,
     message:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit nibh mauris, nec turpis orci lectus maecenas.",
+      "Praesent commodo cursus magna, vel scelerisque nisl consectetur et turpis orci lectus maecenas Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut voluptate quo quibusdam iure quas nulla perspiciatis saepe rerum, hic aperiam necessitatibus, nihil ducimus. Cumque nobis odit possimus, quis voluptas omnis...",
     date: "Apr 12, 1990",
   },
   {
@@ -24,7 +24,7 @@ export const testimonials = [
     name: "Sarah Smith",
     image: user2,
     message:
-      "Suspendisse sed magna eget nibh in turpis. Vivamus fermentum semper porta.",
+      "Praesent commodo cursus magna, vel scelerisque nisl consectetur et turpis orci lectus maecenas Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut voluptate quo quibusdam iure quas nulla perspiciatis saepe rerum, hic aperiam necessitatibus, nihil ducimus. Cumque nobis odit possimus, quis voluptas omnis..",
     date: "May 08, 1992",
   },
  

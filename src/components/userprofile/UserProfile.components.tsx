@@ -25,8 +25,7 @@ const UserProfile: FC = () => {
 
   return (
     <div
-      className="flex flex-col items-center bg-neutral-100
- justify-center mt-8"
+      className="flex flex-col items-center bg-neutral-100 justify-center"
     >
       <button className="border mt-2 border-gray-400 text-black px-3 py-2 rounded-full text-sm font-semibold">
         Testimonial
