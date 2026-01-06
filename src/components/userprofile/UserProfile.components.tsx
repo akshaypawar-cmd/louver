@@ -1,16 +1,15 @@
-import { useState, type FC  } from "react";
+import { useState, type FC } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import { testimonials } from "@mockData";
 
 const UserProfile: FC = () => {
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const hasData = testimonials.length > 0;
   const currentTestimonial = hasData ? testimonials[currentIndex] : null;
-  const arrowBtnClass ="hidden md:flex size-11 border border-gray-600 text-gray-600 rounded-full items-center justify-center";
-  const iconBtnClass ="w-11 h-11 border border-gray-600 text-gray-600 rounded-full flex items-center justify-center";
+  const arrowBtnClass ="hidden md:flex size-11 border border-gray-600 text-gray-600 rounded-full items-center justify-center"
+  const iconBtnClass ="w-11 h-11 border border-gray-600 text-gray-600 rounded-full flex items-center justify-center"
 
   const handlePrev = () => {
     setCurrentIndex((prev) =>
@@ -25,8 +24,11 @@ const UserProfile: FC = () => {
   };
 
   return (
-    <div className="md:max-w-4xl mx-auto flex flex-col items-center justify-center mt-6">
-      <button className="border border-gray-100 text-black px-3 py-2 rounded-full text-sm font-semibold">
+    <div
+      className="flex flex-col items-center bg-neutral-100
+ justify-center mt-8"
+    >
+      <button className="border mt-2 border-gray-400 text-black px-3 py-2 rounded-full text-sm font-semibold">
         Testimonial
       </button>
 
@@ -44,25 +46,26 @@ const UserProfile: FC = () => {
           >
             <ArrowLeft className="w-5 h-5" />
           </button>
-          <div className="rounded-2xl md:w-3xl md:px-10 md:py-4 flex flex-col md:flex-row bg-gray-100 items-center gap-4 p-4 h-64 md:h-52">
+
+          <div className="bg-white rounded-2xl shadow-md  max-w-3xl px-6 md:p-14 p-10 flex md:flex-row flex-col items-center gap-5">
             {hasData ? (
               <>
                 <img
                   src={currentTestimonial!.image}
                   alt={currentTestimonial!.name}
-                  className="w-24 h-24 md:w-20 md:h-20 rounded-full object-cover shadow-lg"
+                  className="w-24 h-24 rounded-full object-cover shadow"
                 />
 
-                <div className="text-left">
-                  <h3 className="text-lg font-semibold text-gray-900">
+                <div className="flex-1">
+                  <h3 className="text-base font-semibold text-gray-900">
                     {currentTestimonial!.name}
                   </h3>
 
-                  <p className="text-sm text-gray-600 mt-1 line-clamp-4">
+                  <p className="text-sm text-gray-500 mt-2 leading-relaxed line-clamp-4">
                     {currentTestimonial!.message}
                   </p>
 
-                  <p className="text-xs text-black mt-2">
+                  <p className="text-xs text-gray-400 mt-3">
                     {currentTestimonial!.date}
                   </p>
                 </div>

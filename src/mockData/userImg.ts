@@ -3,6 +3,14 @@ import user2 from "@assets/user2.jpg";
 import user3 from "@assets/user3.jpg";
 
 export const testimonials = [
+   {
+    id: 3,
+    name: "David Warner",
+    image: user3,
+    message:
+      "Praesent commodo cursus magna, vel scelerisque nisl consectetur et turpis orci lectus maecenas..",
+    date: "Jan 21, 1995",
+  },
   {
     id: 1,
     name: "John Doe",
@@ -19,12 +27,5 @@ export const testimonials = [
       "Suspendisse sed magna eget nibh in turpis. Vivamus fermentum semper porta.",
     date: "May 08, 1992",
   },
-  {
-    id: 3,
-    name: "David Warner",
-    image: user3,
-    message:
-      "Praesent commodo cursus magna, vel scelerisque nisl consectetur et.",
-    date: "Jan 21, 1995",
-  },
+ 
 ];

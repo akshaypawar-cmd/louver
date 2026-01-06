@@ -1,2 +1,2 @@
-import  UserProfile from "./UserProfile.components";
-export  {UserProfile}
+import UserProfile from "./UserProfile.components";
+export { UserProfile };
