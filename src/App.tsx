@@ -1,7 +1,6 @@
 import type { FC } from "react";
 
-import { Cards, Competition, Facility, HeroSection, UserInfo, UserProfile,  } from "@components";
-import UserMembership from "./components/membership/UserMembership.components";
+import { Cards, Competition, Facility, HeroSection, UserInfo, UserMembership, UserProfile} from "@components";
 
 const App: FC = () => {
     

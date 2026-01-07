@@ -1,3 +1,3 @@
-import type UserMembership from "./UserMembership.components";
+import UserMembership from "./UserMembership.components";
 
-export type  {UserMembership}
+export {UserMembership}
