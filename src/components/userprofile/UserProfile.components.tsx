@@ -8,8 +8,8 @@ const UserProfile: FC = () => {
 
   const hasData = testimonials.length > 0;
   const currentTestimonial = hasData ? testimonials[currentIndex] : null;
-  const arrowBtnClass ="hidden md:flex size-11 border border-gray-600 text-gray-600 rounded-full items-center justify-center"
-  const iconBtnClass ="w-11 h-11 border border-gray-600 text-gray-600 rounded-full flex items-center justify-center"
+  const arrowBtnClass ="hidden md:flex size-11 border border-gray-300 bg-white shadow-md text-gray-600 rounded-full items-center justify-center"
+  const iconBtnClass ="w-11 h-11 text-gray-600 border-gray-300 bg-white shadow-md rounded-full flex items-center justify-center"
 
   const handlePrev = () => {
     setCurrentIndex((prev) =>
@@ -25,8 +25,7 @@ const UserProfile: FC = () => {
 
   return (
     <div
-      className="flex flex-col items-center bg-neutral-100 justify-center"
-    >
+      className="max-w-7xl mx-auto flex flex-col items-center bg-neutral-100 justify-center">
       <button className="border mt-2 border-gray-400 text-black px-3 py-2 rounded-full text-sm font-semibold">
         Testimonial
       </button>
@@ -38,7 +37,7 @@ const UserProfile: FC = () => {
 
       <div className="mt-12 mb-10 p-3 flex flex-col items-center gap-6">
         <div className="flex flex-col md:flex-row items-center gap-4 md:gap-2">
-          <button
+          <button 
             aria-label="previous"
             className={arrowBtnClass}
             onClick={handlePrev}
