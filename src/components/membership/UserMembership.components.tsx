@@ -1,9 +1,9 @@
 import type { FC } from "react"
-import { Send } from 'lucide-react';
+import {Send} from 'lucide-react';
 
 import membershipImg from "@assets/Dum_girl.jpg"
 
-const UserMembership:FC = () => {
+const UserMembership:FC= () => {
 
   return (
  <>
