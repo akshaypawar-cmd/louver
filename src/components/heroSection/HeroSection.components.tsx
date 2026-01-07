@@ -3,31 +3,10 @@ import { Asterisk, Menu, Search, ArrowUpRight } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 import bgImg from "@assets/bgImage.jpg";
-import user1 from "@assets/user1.jpg";
-import user2 from "@assets/user2.jpg";
-import user3 from "@assets/user3.jpg";
-import user4 from "@assets/user4.jpg";
+import { menuItems, navItems, users } from "@mockData";
 
 const HeroSection: FC = () => {
-  const menuItems = [
-    { name: "About Us", link: "/aboutUs" },
-    { name: "Facilities", link: "/facilities" },
-    { name: "Membership", link: "/membership" },
-  ];
-
-  const navItems = [
-    { name:"About Us",link: "/about" },
-    { name:"Facilities",link: "/facilities" },
-    { name:"Membership",link: "/membership" },
-  ];
-
-  const users = [
-    { id: 1, img: user1 },
-    { id: 2, img: user2 },
-    { id: 3, img: user3 },
-    { id: 4, img: user4 },
-  ];
-
+  
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
@@ -47,7 +26,7 @@ const HeroSection: FC = () => {
   return (
     <>
       <div
-        className="h-screen bg-no-repeat bg-cover bg-top-left md:bg-center md:bg-cover relative"
+        className="h-screen max-w-7xl w-full mx-auto bg-no-repeat bg-cover bg-top-left md:bg-center md:bg-cover relative"
         style={{ backgroundImage: `url(${bgImg})` }}
       >
         <nav className="relative md:whitespace-nowrap z-10 max-w-full p-6 flex flex-col">
