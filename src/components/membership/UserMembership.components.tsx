@@ -7,8 +7,8 @@ const UserMembership:FC= () => {
 
   return (
  <>
-      <section className="bg-black h-1/3 mb-10 m-4 flex items-center justify-center rounded-2xl p-2">
-        <div className="max-w-7xl w-full flex flex-col md:flex-row items-center gap-8">
+      <section className="bg-black max-w-7xl mx-auto h-1/3 mb-10 m-4 flex items-center justify-center rounded-2xl p-2">
+        <div className="w-full flex flex-col md:flex-row items-center gap-8">
           <div className="w-full md:w-1/2">
             <img
               src={membershipImg}
@@ -29,10 +29,11 @@ const UserMembership:FC= () => {
 
             <div className="mb-6 w-full">
               <h2 className="text-xl md:text-4xl font-bold text-white mb-2">
-                Get the Last Updates,<span className="block md:inline">Special Offers, </span> <span className="md:block"> and Exclusive Event
-                Invitations! </span> 
+                Get the Last Updates,Special Offers, and Exclusive Event
+                Invitations! 
               </h2> 
             </div>
+            
 
             <div className="relative w-full md:w-1/2">
               <input
