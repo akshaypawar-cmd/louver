@@ -7,7 +7,8 @@ import {
 } from "lucide-react";
 
 import type { FacilityCard } from "./Facility.types";
- import { cardsData } from  "@mockData";
+import { cardsData } from "@mockData";
+
 
 const Facility: FC = () => {
   const scrollRef = useRef<HTMLDivElement | null>(null);
