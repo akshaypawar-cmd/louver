@@ -3,7 +3,7 @@ import { Asterisk, Menu, Search, ArrowUpRight } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 import bgImg from "@assets/bgImage.jpg";
-import { menuItems, navItems, users } from "@mockData";
+import { menuItems, navItems, users } from "@mockdata";
 
 const HeroSection: FC = () => {
   

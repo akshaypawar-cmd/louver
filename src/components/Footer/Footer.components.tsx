@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { Link } from "react-router-dom";
 
-import { facilitiesList, socialLinks } from "@mockData";
+import { facilitiesList, socialLinks } from "@mockdata";
 
 const Footer: FC = () => {
 

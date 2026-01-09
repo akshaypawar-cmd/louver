@@ -10,7 +10,7 @@
     "paths": {
       "@assets/": ["./src/assets/"],
       "@components": ["./src/components/"],
-      "@mockData":["./src/MockData/index"]
+      "@mockdata":["./src/mockdata/index"]
     }, 
 
     /* Bundler mode */
