@@ -4,8 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import imgCom from "@assets/Competition.jpg";
 
 const Competition: FC = () => {
-
-const commonButtonClass ="px-4 py-2 text-xs md:p-2 rounded-full font-medium border border-gray-500";
+  const commonButtonClass ="px-4 py-2 text-xs md:p-2 rounded-full font-medium border border-gray-500";
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-16">
@@ -15,9 +14,7 @@ const commonButtonClass ="px-4 py-2 text-xs md:p-2 rounded-full font-medium bord
             <button className={`${commonButtonClass} bg-sky-200 text-black`}>
               Competition
             </button>
-
             <button className={commonButtonClass}>Training</button>
-
             <button className={commonButtonClass}>Friendly Match</button>
           </div>
 

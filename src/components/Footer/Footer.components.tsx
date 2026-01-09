@@ -1,14 +1,13 @@
-import type { FC } from "react"
-import { Link } from "react-router-dom"
+import type { FC } from "react";
+import { Link } from "react-router-dom";
 
-import { facilitiesList, socialLinks } from "@mockData"
+import { facilitiesList, socialLinks } from "@mockData";
 
-const Footer:FC = () => {
+const Footer: FC = () => {
 
   return (
-  <> 
-      <section className="bg-sky-200 mb-10 m-4 rounded-xl p-5">
-        <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto">
+        <section className="bg-sky-200 mb-10 m-4 rounded-xl p-5">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <p className="text-gray-800 text-2xl md:text-2xl max-w-xs">
@@ -73,11 +72,10 @@ const Footer:FC = () => {
               </a>
             </div>
           </div>
-        </div>
-      </section>
-    </>
- 
-  )
-}
+        </section>
+    </div>
 
-export default Footer
+  );
+};
+
+export default Footer;
