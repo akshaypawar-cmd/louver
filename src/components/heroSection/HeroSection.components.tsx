@@ -26,7 +26,7 @@ const HeroSection: FC = () => {
   return (
     <>
       <div
-        className="h-screen max-w-7xl w-full mx-auto bg-no-repeat bg-cover bg-top-left md:bg-center md:bg-cover relative"
+        className="h-screen w-full  bg-no-repeat bg-cover bg-top-left md:bg-center md:bg-cover relative"
         style={{ backgroundImage: `url(${bgImg})` }}
       >
         <nav className="relative md:whitespace-nowrap z-10 max-w-full p-6 flex flex-col">
@@ -114,7 +114,7 @@ const HeroSection: FC = () => {
           Sport Center
         </button>
 
-        <div className="flex items-center justify-start md:mt-12 pl-6 mt-6">
+        <div className="flex items-center justify-start pl-6 mt-6 md:mt-10">
           <div className="text-white w-11/12">
             <div className="flex justify-between gap-6">
               <h1 className="text-xs md:text-2xl font-light max-w-lg">
@@ -125,7 +125,7 @@ const HeroSection: FC = () => {
                 for Every Passion
               </h1>
 
-              <div className="flex flex-col items-start bg-white/10 backdrop-blur-sm p-2  rounded">
+              <div className="flex flex-col items-start bg-white/10 backdrop-blur-sm p-2 rounded">
                 <Asterisk className="text-white text-3xl mb-2"/>
                 <p className="text-white  text-sm leading-tight">
                   All in one-sports <span className="block">facilities centre </span> 
@@ -135,7 +135,7 @@ const HeroSection: FC = () => {
           </div>
         </div>
 
-        <div className="absolute w-full bottom-20 flex flex-col items-end pr-6">
+        <div className="absolute w-full bottom-14 md:bottom-6 flex flex-col items-end pr-6">
           <div className="flex border border-blue-800 rounded-full p-1">
             {users.map((item, index) => (
               <img
