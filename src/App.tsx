@@ -1,6 +1,6 @@
 import type { FC } from "react";
 
-import { Cards, Competition, Facility, HeroSection, UserInfo, UserMembership, UserProfile} from "@components";
+import { Cards, Competition, Facility, Footer, HeroSection, UserInfo, UserMembership, UserProfile} from "@components";
 
 const App: FC = () => {
     
@@ -13,6 +13,7 @@ const App: FC = () => {
       <UserInfo />
       <UserProfile/>
       <UserMembership/>
+      <Footer/>
     </>
   );
 };

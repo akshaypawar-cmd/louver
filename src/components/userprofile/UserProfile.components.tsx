@@ -1,7 +1,7 @@
 import { useState, type FC } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
-import { testimonials } from "@mockData";
+import { testimonials } from "@mockdata";
 
 const UserProfile: FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

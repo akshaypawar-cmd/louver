@@ -3,7 +3,7 @@ import { Asterisk, Menu, Search, ArrowUpRight } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 import bgImg from "@assets/bgImage.jpg";
-import { menuItems, navItems, users } from "@mockData";
+import { menuItems, navItems, users } from "@mockdata";
 
 const HeroSection: FC = () => {
   
@@ -26,16 +26,17 @@ const HeroSection: FC = () => {
   return (
     <>
       <div
-        className="h-screen max-w-7xl w-full mx-auto bg-no-repeat bg-cover bg-top-left md:bg-center md:bg-cover relative"
+        className="h-screen max-w-screen-2xl mx-auto bg-no-repeat bg-cover bg-top-left md:bg-center md:bg-cover relative"
         style={{ backgroundImage: `url(${bgImg})` }}
       >
-        <nav className="relative md:whitespace-nowrap z-10 max-w-full p-6 flex flex-col">
+        <nav className="relative md:whitespace-nowrap z-10 max-w-full p-6 flex flex-col md:p-6">
           <div className="flex items-center justify-between md:gap-2 w-full">
             <div className="text-xl md:text-sm font-bold text-white">
               LOUVER <span className="font-normal md:text-sm">SPORT</span>
             </div>
-
-            <div className="hidden md:flex items-center md:gap-4 md:p-4 text-sm gap-6 bg-white/10 backdrop-blur-sm rounded-full px-5 py-2 text-white">
+            
+            <div className="flex items-center gap-3 md:gap-3">
+              <div className="hidden md:flex items-center md:gap-4 md:p-3 text-sm gap-6 bg-white/10 backdrop-blur-sm rounded-full px-5 py-2 text-white">
               {navItems.map((item) => (
                 <NavLink
                   key={item.link}
@@ -50,8 +51,6 @@ const HeroSection: FC = () => {
                 </NavLink>
               ))}
             </div>
-
-            <div className="flex items-center gap-3 md:gap-2">
               <div className="hidden md:block relative backdrop-blur-sm rounded-full">
                 <Search
                   size={35}
@@ -64,7 +63,7 @@ const HeroSection: FC = () => {
                 />
               </div>
 
-              <button className="hidden md:flex bg-gray-900 md:ml-3 items-center px-4 py-2 text-xs text-white rounded-full gap-2">
+              <button className="hidden md:flex bg-gray-900 md:ml- items-center px-4 py-2 text-xs text-white rounded-full gap-2">
                 Book Now <ArrowUpRight />
               </button>
 
@@ -114,7 +113,7 @@ const HeroSection: FC = () => {
           Sport Center
         </button>
 
-        <div className="flex items-center justify-start md:mt-12 pl-6 mt-6">
+        <div className="flex items-center justify-start pl-6 mt-6 md:mt-10">
           <div className="text-white w-11/12">
             <div className="flex justify-between gap-6">
               <h1 className="text-xs md:text-2xl font-light max-w-lg">
@@ -125,7 +124,7 @@ const HeroSection: FC = () => {
                 for Every Passion
               </h1>
 
-              <div className="flex flex-col items-start bg-white/10 backdrop-blur-sm p-2  rounded">
+              <div className="flex flex-col items-start bg-white/10 backdrop-blur-sm p-2 rounded">
                 <Asterisk className="text-white text-3xl mb-2"/>
                 <p className="text-white  text-sm leading-tight">
                   All in one-sports <span className="block">facilities centre </span> 
@@ -135,7 +134,7 @@ const HeroSection: FC = () => {
           </div>
         </div>
 
-        <div className="absolute w-full bottom-20 flex flex-col items-end pr-6">
+        <div className="absolute w-full bottom-14 md:bottom-12 flex flex-col items-end pr-6">
           <div className="flex border border-blue-800 rounded-full p-1">
             {users.map((item, index) => (
               <img
